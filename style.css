@@ -1,0 +1,977 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+body{
+    font-family: "futura-pt", sans-serif;
+    /* overflow: hidden; */
+}
+.button{
+    color: #FFF;
+    background-color: #C15627;
+    border-radius: 30px ;
+    padding: 10px 16px;
+    text-wrap: nowrap;
+    position: relative;
+    transition: .5s;
+    font-size: 13px;
+    text-decoration: none;
+    border: none;
+}
+.wrapper{
+    width: 100%;
+    background-color: #fff;
+    }
+.navbar {
+    background-color: #FFF;
+    overflow: hidden;
+    /* position: fixed; */
+    width: 100%;
+    margin: 0px auto;
+    padding: 20px;
+    justify-content: space-evenly;
+    display: flex;
+    z-index: 10; /* Lower z-index */
+    transition: all 300ms ease-in-out;
+    
+  }
+
+  .navbar-left, .navbar-right {
+    float: left;
+  }
+
+  .navbar-left div, .navbar-right div {
+    float: left;
+    padding: 15px;
+    color: #000;
+    text-align: center;
+  }
+  .navbar-right div button{
+    border: none;
+    background-color: transparent;
+    justify-content: center;
+  }
+  .navbar-right div button a{
+    color: #FFF;
+    background-color: #C15627;
+    border-radius: 30px ;
+    padding: 10px 16px;
+    text-wrap: nowrap;
+    position: relative;
+    transition: .5s;
+    font-size: 13px;
+    text-decoration: none;
+  }
+
+  .navbar-center {
+    float: left;
+    padding: 15px;
+    color: #000;
+    text-align: center;
+  }
+  .navbar-center a{
+    color: #000;
+  }
+  .navbar-Logo{
+    display: block;
+    color: #1A4122;
+    text-transform: uppercase;
+    font-family: "futura-pt", sans-serif;
+    font-size: 2rem;
+    letter-spacing: 2.1px;
+    font-style: normal;
+    font-weight: 450;
+  }
+  .navbar-Logo-bottom{
+    letter-spacing: 2.1px;
+    font-size: smaller;
+    margin-top: 2px;
+    color: #bab8b8;
+  }
+
+
+
+  /* MAIN */
+
+#video-background {
+    top: 2;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Higher z-index */
+    background-size: cover;
+}
+
+/* Optional: Add some content on top of the video */
+#content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-family: "F37 Caslon", serif;
+    font-weight: lighter;
+    font-size: 4rem;
+}
+#arrow-down{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    margin-left: 50%;
+    margin-bottom: 10px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(https://24carrots.com/wp-content/themes/24carrots/img/icon/down-cheveron.svg);
+    width: 38px;
+    height: 12px;
+}
+#wedding{
+    width: 100%;
+    max-width: 1240px;
+    margin: 0px auto;
+    padding: 20px;
+    height: 100%;
+    display: flex;
+}
+.wedding-left {
+    flex: 40%;
+
+}
+.wedding-left img{
+    height: 100%;
+    width: 100%;
+    border-top-left-radius:200px;
+    border-top-right-radius: 200px;
+    object-fit: cover;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    transition: transform cubic-bezier(0.47, 0.29, 0.66, 0.88) 250ms;
+}
+
+.wedding-right {
+    flex: 60%;
+    margin-left: 80px;
+}
+.wedding-right-top{
+    
+    margin-top: 80px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+     
+}
+.wedding-right-top h1{
+    font-family: "F37 Caslon", serif;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 92%;
+    letter-spacing: -3px;
+    margin-top: 0px;
+    margin-bottom: 24px
+}
+.wedding-right-bottom{
+    margin-top: 2rem;
+    grid-template-columns: 3fr 9fr;
+    column-gap: 4.75rem;
+    display: grid;
+    align-items: start;
+    gap: 3rem;
+}
+.wedding-right-bottom-right , .wedding-right-bottom-left{
+    font-family: "F37 Caslon", serif;
+    font-size: 1.625rem;
+    font-weight: 400;
+}
+.wedding-right-bottom-right-items{
+    margin-top: 1rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: block;
+    font-family: "F37 Caslon", serif;
+    font-size: 1.625rem;
+    font-weight: 400;
+    color: rgba(146, 146, 146, 0.5);
+    transition: color ease 400ms;
+}
+.wedding-right-bottom-left div p{
+    color: rgba(146, 146, 146, 0.5);    
+    font-family: "futura-pt", sans-serif;
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 140%;
+    margin-top: 1rem;
+}
+.container {
+    width: 100vw;
+    margin: auto;
+}
+
+.slider-wrapper {
+    position: relative;
+    height: 90vh;
+}
+
+.slider-wrapper .slide-button {
+    position: absolute;
+    top: 50%;
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+    color: #fff;
+    display: flex;
+    cursor: pointer;
+    font-size: 2.2rem;
+    background: #000;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.slider-wrapper .slide-button:hover {
+    background: #404040;
+}
+
+.slider-wrapper .slide-button#prev-slide {
+    left: -25px;
+    display: none;
+}
+
+.slider-wrapper .slide-button#next-slide {
+    right: -25px;
+}
+
+.slider-wrapper .image-list {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 18px;
+    font-size: 0;
+    list-style: none;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.slider-wrapper .image-list::-webkit-scrollbar {
+    display: none;
+}
+
+.slider-wrapper .image-list .image-item {
+    width: 42vw;
+    height: 600px;
+    object-fit: cover;
+    position: relative;
+}
+
+.slider-scrollbar {
+    height: 24px;
+    width: 17rem; /* Adjust width as desired */
+    margin: auto; /* Center the scrollbar horizontally */
+    display: flex;
+    justify-content: center; /* Center the scrollbar thumb within the track */
+}
+
+.slider-scrollbar .scrollbar-track {
+    background: #ccc;
+    width: 100%; /* Make the track full-width */
+    height: 2px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    position: relative;
+}
+
+.slider-scrollbar:hover .scrollbar-track {
+    height: 4px;
+}
+
+.slider-scrollbar .scrollbar-thumb {
+    position: absolute;
+    background: #000;
+    top: 0;
+    bottom: 0;
+    width: 20%; /* Adjust width of the thumb as desired */
+    height: 100%;
+    cursor: grab;
+    border-radius: inherit;
+}
+
+.slider-scrollbar .scrollbar-thumb:active {
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+}
+
+.slider-scrollbar .scrollbar-thumb::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+}
+
+/* Styles for mobile and tablets */
+@media only screen and (max-width: 1023px) {
+    .slider-wrapper .slide-button {
+        display: none !important;
+    }
+
+    .slider-wrapper .image-list {
+        gap: 10px;
+        margin-bottom: 15px;
+        scroll-snap-type: x mandatory;
+    }
+
+    .slider-wrapper .image-list .image-item {
+        width: 280px;
+        height: 380px;
+    }
+
+    .slider-scrollbar {
+        width: 70%; /* Adjust width for mobile */
+    }
+}
+
+.image-card {
+    height: auto;
+    box-shadow: 2px 2px 5px black;
+    transition: 0.7s ease-in-out; /* Adjust transition properties */
+    display: grid;
+}
+
+.image-card:hover .image-desc {
+    visibility: visible;
+    cursor: pointer;
+}
+
+.image-desc {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.7); /* Use rgba for transparency */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 1s ease-in-out; /* Adjust transition properties */
+}
+
+  .slider {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    height: 600px;
+    overflow: hidden;
+    border-top-left-radius:300px;
+    margin-bottom: 20px;
+  }
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  .slide {
+    flex: 0 0 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .slide img {
+    height: 100%;
+    height: 78vh;
+    width: 100%;
+    max-height: 690px;
+    object-fit: cover;
+    max-width: none;
+  }
+  .buttons {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  .second{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    margin-top: 40px;
+  }
+  .cont{
+    width: 50%;
+    text-align: center;
+    height: 100%;
+  }
+  .second h2{
+        color: #1A4122;
+        text-align: center;
+        font-family: "F37 Caslon", serif;
+        font-size: 100px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 92%;
+        letter-spacing: -3px;
+        margin-top: 0px;
+        margin-bottom: 24px;
+  }
+  .second p{
+    max-width: 490px;
+    margin: 30px auto 35px;
+    color: #1A4122;
+    line-height: 140%;
+  }
+
+  #wedding-bg{
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    min-height: 595px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    position: relative;
+    background-image: url(./assests/unforegetable-banner.png);
+    margin-top: 200px;
+  }
+
+  .circle-content{
+    position: relative;
+    z-index: 2;
+    margin: -50px auto 0;
+    max-width: 620px;
+    display: block;
+    font-family: "futura-pt", sans-serif;
+  }
+  #half-circle{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 345px 345px 0 0;
+    background-color: #fff;
+    display: block;
+    z-index: 1;
+    height: 316px;
+    width: 643px;
+    bottom: -292px px;
+    font-size: 1rem;
+  }
+  .twenty-four-content h3{
+    color: #647B4E;
+    text-align: center;
+    font-family: "Rustica", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .twenty-four-content h2{
+    color: #1A4122;
+    text-align: center;
+    font-family: "F37 Caslon", serif;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 92%;
+    letter-spacing: -3px;
+    margin-top: 0px;
+    margin-bottom: 24px;
+  }
+  .twenty-four-content p{
+    font-size: 20px;
+    line-height: 140%;
+    margin-bottom: 35px;
+    letter-spacing: 0.16px;
+    color: #1A4122;
+    align-items: center;
+  }
+  .twenty-four-content p button{
+    margin-left: 45%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+.containerc {
+    display: flex;
+    flex-direction: column;
+    height: 550px; /* Adjust according to your design */
+}
+
+.box {
+    position: relative;
+    margin: 10px 0;
+    height: 300px; /* Fixed height for boxes */
+}
+
+li {
+    list-style: none;
+    text-align: left;
+}
+.twenty-four-content{
+    max-width: 620px;
+    margin: 0 auto;
+}
+.youtube-wrap{
+    margin: 0px auto;
+    display: block;
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+    max-width: 1200px;
+}
+#_ytid_32662{
+        position: relative;
+        padding-bottom: 10%;
+        /* height: 0; */
+        overflow: hidden;
+        max-width: 100%;
+        -webkit-transition: .4s all;
+        -moz-transition: .4s all;
+        transition: .4s all;
+
+}
+.epty-facade img{
+    display: block;
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 0;
+    height: auto;
+    cursor: pointer;
+}
+.epyt-facade-play{
+    background-color: transparent!important;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 68px;
+    height: 48px;
+    margin-left: -34px;
+    margin-top: -400px;
+    -webkit-transition: opacity .25s cubic-bezier(0,0,0.2,1);
+    transition: opacity .25s cubic-bezier(0,0,0.2,1);
+    cursor: pointer;
+    border-width: 0!important;
+    background-image: url(https://24carrots.com/wp-content/themes/24carrots/img/icon/play-btn.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.the-content{
+    max-width: 840px;
+    margin: 0% auto;
+    font-family:  "futura-pt", sans-serif;;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+    margin-bottom: 35px ;
+}
+
+.cbutton {
+    padding: 5px 12px;
+    border: none;
+    font-family: "futura-pt", sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 3.24px;
+    text-transform: uppercase;
+    border-radius: 80px;
+    color: #FFF;
+    background-color: #C15627;
+    text-decoration: none;
+    margin-top: 7px;
+    display: inline-block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+h2 {
+    font-size: 4rem;
+    line-height: 4.5rem;
+    text-align: center;
+    color: #fff;
+}
+
+.box h2 {
+    color: #1A4122;
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    text-align: left ;
+    margin-top: 5px;
+}
+
+.box:hover .overlay {
+    opacity: 0.7;
+    background-color: #C15627;
+}
+
+.box:hover .hvrbtn {
+    opacity: 1;
+}
+/* Adjust padding to create space between "Read More" text and arrow */
+.hvrbtn {
+    opacity: 0;
+    background-color: transparent;
+    color: #FFF;
+    border: solid #FFF 1px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    cursor: pointer;
+    padding: 5px 40px 9px 20px; /* Adjust padding to create space for the arrow */
+}
+
+/* Adjust arrow position */
+.arrow {
+    content: '';
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(arrow-white.svg);
+    width: 20px; /* Adjust arrow width */
+    height: 20px; /* Adjust arrow height */
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Adjust distance between arrow and text */
+    transform: translateY(-50%);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Rest of your CSS */
+
+.box p {
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure images fit within box dimensions */
+}
+
+.cookin {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    gap: 1;
+    height: 100%;
+}
+.box {
+    position: relative;
+    margin: 10px 0; /* Add margin between boxes */
+    height: 300px; /* Fixed height for boxes */
+}
+
+@media only screen and (min-width: 768px) {
+    .cookin {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .box {
+        width: calc(50% - 10px); /* Adjust width to accommodate margin */
+    }
+
+    .box + .box {
+        margin-left: 20px; /* Gap between boxes */
+    }
+}
+.endless-wrap{
+    margin-top:20px ;
+    display: flex;
+    width: 100%;
+    padding: 100px 0 250px;
+    flex-direction: row;
+}
+.endless-img{
+    background-image: url(./assests/t1.png);
+    background-size: cover;
+    background-position: center;
+    height: 100px;
+    
+}
+.endless-items{
+    width: 50%;
+    height: 504.6px;
+}
+.endless-content{
+    width: 50%;
+    background-color: #C15627;
+    color: #FFF;
+    padding: 50px 0 100px;
+    height: 504.6px;
+    flex: 0 1 auto;
+}
+.signUp-wrap{
+    max-width: 616px;
+    float: right;
+    padding-right: 100px;
+    padding-left: 10px;
+    color: #FFF;
+}
+.signUp-wrap h2{
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-bottom: 1.5em;
+    font-weight: bold;
+    clear: both;
+    font-family: "F37 Caslon", serif;
+    font-weight: lighter;
+    margin-bottom: 0px;
+    font-size: 4rem;
+    line-height: 4.5rem;
+}
+.signUp-wrap p{
+    font-family: "futura-pt", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+    letter-spacing: 0.16px;
+    font-size: 1.25rem;
+    max-width: 460px;
+    color: #FFF;
+    margin-bottom: 1.5em;
+}
+.form input{
+    font-size: 14px;
+    width: 60%;
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: none;
+    line-height: 100%;
+}
+.form button{
+    background-color: #993921;
+    border-radius: 30px;
+    padding: 10px 30px;
+    text-wrap: nowrap;
+    position: relative;
+    text-transform: uppercase;
+    font-family: "futura-pt", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.6px;
+    text-decoration: none;
+    color: #FFF;
+    transition: .5s;
+    cursor: pointer;
+    display: inline-block;
+    z-index: 2;
+    background-size: 20px;
+    background-position: 90px 19px;
+    background-repeat: no-repeat;
+    margin-left: 17px;
+    text-indent: 7px;
+    min-height: 52px;
+}
+.endless-p{
+    width: 100%;
+    display: block;
+    clear: both;
+    margin-top: 20px;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+    letter-spacing: 0.16px;
+    font-family: "futura-pt", sans-serif;
+}
+.slider-container-wraper{
+    width: 100%;
+    background-color: #1A4122;
+}
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 70%;
+    display: flex;
+    margin: auto;
+    flex-direction: r;
+    height: 400px;
+    background-color: #1A4122;
+  }
+  
+  .sliderz {
+    display: flex;
+    transition: transform 0.5s ease;
+    /* width: 70%; */
+  }
+  
+  .slidez {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+  .contentslider
+{
+    display: flex;
+    flex-direction: column;
+}
+  .slidez img {
+    width: 50%;
+    height: auto;
+    padding-right: 30px;
+    object-fit: cover;
+    height: 600px;
+    object-position: bottom;
+  }
+  .next-btn {
+    position: absolute;
+    top: 90%;
+    background: transparent;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .contentslider p{
+    color: #FFF;
+    font-family: Futura PT;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+    letter-spacing: 0.56px;
+    padding-left: 5px;
+    padding-top: 0;
+    margin-top: 0;
+    max-width: 500px;
+    padding-left: 30px;
+  }
+  .next-btn {
+    right: 0;
+    color: white;
+  }
+  
+.author-title{
+    margin: 10px 0;
+    color: #B4C7A3;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+}
+  .pagination {
+    color: white;
+    padding-left: 15px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    /* transform: translateX(-%); */
+    display: flex;
+  }
+  
+  .pagination-dot {
+    width: 40px;
+    height:2px;
+    background-color: #344a38;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .pagination-dot.active {
+    background-color: #FFF;
+  }
+  #scrollToTopBtn
+  {
+    position: fixed;
+    bottom: -2px;
+    width: 186px;
+    height: 38px;
+    font-size: 0px;
+    background-image: url(https://24carrots.com/wp-content/themes/24carrots/img/back_to_top.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white;
+    border: none;
+    z-index: 9;
+    background-color: transparent;
+    left: 50%;
+    margin-left: -93px;
+    transition: .5s;
+    cursor: pointer;
+  }
+  .carrot-pin::before{
+    margin-top: 1500px;
+    z-index: -1;
+    content: '';
+    width: 600px;
+    height: 2059px;
+    background-image: url(https://24carrots.com/wp-content/themes/24carrots/img/big-carrot.svg);
+    background-size: 600px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    display: block;
+    position: absolute;
+    top: -150px;
+    left: 0;
+  }
